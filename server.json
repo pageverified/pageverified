@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.pageverified/tools",
+  "description": "Check AI-agent tools before you pick or pay: capture, MCP and x402 inspectors, verified directory.",
+  "version": "1.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://pageverified.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional for initialize, tools/list and free tools; Bearer PageVerified API key for paid tools (25 free credits, no signup)",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "title": "PageVerified",
+  "websiteUrl": "https://pageverified.com"
+}
